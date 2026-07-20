@@ -3,77 +3,187 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Technische Datenblätter</title>
 
 <style>
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:"Segoe UI", Arial, sans-serif;
 }
 
 body{
-    background:#f4f6f8;
+    min-height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
-    min-height:100vh;
+    background:
+    linear-gradient(135deg,#eef2f7,#d9e4f5);
 }
 
 .container{
     width:90%;
-    max-width:600px;
+    max-width:650px;
+    animation:fadeIn 1s ease;
 }
+
+h1{
+    text-align:center;
+    margin-bottom:35px;
+    color:#1e293b;
+    font-size:32px;
+    font-weight:700;
+}
+
 
 .card{
-    display:block;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    height:75px;
+    margin:18px 0;
+
+    background:rgba(255,255,255,0.75);
+    backdrop-filter:blur(10px);
+
+    border-radius:20px;
+
     text-decoration:none;
-    background:#fff;
-    color:#222;
-    padding:20px;
-    margin:15px 0;
-    border-radius:12px;
+    color:#1e293b;
+
     font-size:20px;
     font-weight:600;
-    box-shadow:0 5px 15px rgba(0,0,0,.08);
-    transition:.2s;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,0.08);
+
+    border:1px solid rgba(255,255,255,0.6);
+
+    transition:
+    transform .3s ease,
+    box-shadow .3s ease,
+    background .3s ease,
+    color .3s ease;
+
+    animation:slideUp .6s ease forwards;
+    opacity:0;
 }
 
-.card:hover{
-    transform:translateY(-3px);
-    box-shadow:0 10px 25px rgba(0,0,0,.15);
-    background:#0078d4;
-    color:white;
+
+.card:nth-child(2){
+    animation-delay:.1s;
 }
+
+.card:nth-child(3){
+    animation-delay:.2s;
+}
+
+.card:nth-child(4){
+    animation-delay:.3s;
+}
+
+.card:nth-child(5){
+    animation-delay:.4s;
+}
+
+.card:nth-child(6){
+    animation-delay:.5s;
+}
+
+
+.card:hover{
+
+    transform:
+    translateY(-8px)
+    scale(1.03);
+
+    background:
+    linear-gradient(135deg,#0078ff,#00c6ff);
+
+    color:white;
+
+    box-shadow:
+    0 20px 40px rgba(0,120,255,.3);
+}
+
+
+.card:active{
+    transform:scale(.97);
+}
+
+
+@keyframes fadeIn{
+
+from{
+    opacity:0;
+}
+
+to{
+    opacity:1;
+}
+
+}
+
+
+@keyframes slideUp{
+
+from{
+    opacity:0;
+    transform:translateY(30px);
+}
+
+to{
+    opacity:1;
+    transform:translateY(0);
+}
+
+}
+
+
 </style>
 
 </head>
+
+
 <body>
+
 
 <div class="container">
 
-<a class="card" href="https://canva.link/p6br58wgdt64yqh" target="_blank">
-Delta-PT-Duroset 1
-</a>
+<h1>Technische Datenblätter</h1>
 
-<a class="card" href="https://canva.link/s3fgzbro6vfncgw" target="_blank">
-Direktverschraubung in Kunststoffe Reform
-</a>
-
-<a class="card" href="https://canva.link/dh50f5cirlcvf59" target="_blank">
-EJOT FDS
-</a>
-
-<a class="card" href="https://canva.link/wblscyaugc8v24r" target="_blank">
-Ejot-Delta-PT-Thermoplast
-</a>
 
 <a class="card" href="https://canva.link/mjs0udf8fvpnozg" target="_blank">
 Fastite Taptite
 </a>
 
+
+<a class="card" href="https://canva.link/dh50f5cirlcvf59" target="_blank">
+EJOT FDS
+</a>
+
+
+<a class="card" href="https://canva.link/wblscyaugc8v24r" target="_blank">
+EJOT Delta PT
+</a>
+
+
+<a class="card" href="https://canva.link/s3fgzbro6vfncgw" target="_blank">
+Direktverschraubung in Kunststoffe Reform
+</a>
+
+
+<a class="card" href="https://canva.link/p6br58wqdt64yqh" target="_blank">
+Delta PT Duroset
+</a>
+
+
 </div>
+
 
 </body>
 </html>
